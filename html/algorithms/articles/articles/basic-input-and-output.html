@@ -1,0 +1,70 @@
+<h1>Basic Input And Output</h1>
+
+<p><i>Authored by: Troy Serapio</i> • <i>Published: March 15, 2024</i></p>
+
+<hr>
+
+<h2>Why is Input and Output even important?</h2>
+
+<p>Well, without taking input from the user, what data and variables would you work with? In addition, without having an output, what would be the purpose of even using the algorithm? Those two questions are the essence of why taking in input and output is essential, especially in competitive programming.</p>
+
+<h2>So, how do I take in Input?</h2>
+
+<p>Well, there are two ways to go about taking input in C++. The first way is the slow, but usually preferred way especially when time limits do not really matter. It makes use of <code>cin</code>, which is present in the <code>iostream</code> module in C++. </p>
+
+<h3>Slow Way (<code>cin</code>)</h3>
+
+<p>All you actually need to know for <code>cin</code> is that it gets all the characters until the next whitespace (space, newline, etc.), and stores it in a variable (C++ only allows for <code>int</code>, <code>string</code>, and similar data types to my knowledge). To make it simpler to understand, here is an example code snippet:</p>
+
+<pre><code>
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main() {
+        string NString;
+        int NInteger;
+        cout &lt;&lt; "Input your favorite number TWICE: " &lt;&lt; endl;
+        cin >> NString;
+        cin >> NInteger;
+        cout &lt;&lt; NString &lt;&lt; " " &lt;&lt; NInteger &lt;&lt; endl;
+    
+        return 0;
+    }
+</code></pre>
+
+<p>So as it turns out, as long as you input a numeric number (not too big either), you end up with a program that spews out said number, twice! That implies that C++ was able to "force in" and discern the fact that the random string input you just inputted was actually an integer, but could also be interpreted as a string! Amazing!</p>
+
+<h3>Fast Way (<code>scanf</code>)</h3>
+
+<p>Alright, so this is actually how C does it. You <em>c</em> (get it), <code>scanf</code> actually takes in input as formatted strings. I personally have not been able to master it, so here is a <a href="https://www.w3schools.com/c/c_user_input.php">W3Schools</a> article that talks about it. </p>
+
+<h2>So, how do I spit out Output?</h2>
+
+<p>Well, just like taking in Input, Output has its own <code>cin</code>. Its called <code>cout</code> (short for console output). </p>
+
+<h3>Slow Way (<code>cout</code>)</h3>
+
+<p>All you actually need to know for <code>cout</code> is that, whatever you put in there, just gets spitted out. Only native data types work in <code>cout</code>, so don't even bother trying to <code>cout</code> an array without looping through it. Other than that, you can <code>cout</code> stuff like strings, which is shown in this code snippet:</p>
+
+<pre><code>
+
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main() {
+        cout &lt;&lt;"Hello World!" &lt;&lt; endl;
+        return 0;
+    }
+
+</code></pre>
+
+<h3>Fast Way (<code>printf</code>)</h3>
+
+<p>Alright, so this is actually how C does it. You <em>c</em> (get it), <code>printf</code> actually is outputting a formatted string, where you can put stuff like "%d" to indicate that that part of the string would be an integer. I personally have not been able to master it, so here is a <a href="https://www.w3schools.com/c/c_output.php">W3Schools</a> article that talks about it. </p>
+
+<h2>Alright, goodbye everyone!</h2>
+
+<p>PS: Sorry for the rushed article, I just needed to put something for my CS project.</p>
+
+<p>Credits to W3Schools for parts of this article.</p>
+
+
+<br><br><br>

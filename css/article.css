@@ -1,0 +1,38 @@
+* {
+    text-align: justify;
+}
+
+.container {
+    padding-top: 20vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+/* 
+
+Text sizes
+
+*/
+
+h1 {
+    font-size: min(7vw, 7vh);
+}
+
+h2 {
+    font-size: min(4.25vw, 4.25vh);
+}
+
+h3 {
+    font-size: min(3.75vw, 3.75vh);
+}
+
+p {
+    font-size: min(2.5vw, 2.5vh);
+}
+
+/* To adapt to navbar */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding-top: 34vh;
+    }
+}

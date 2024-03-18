@@ -1,0 +1,93 @@
+/* Centered Content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Textbox is that width and that height and has that font size */
+input[type="text"] {
+    width: 45vw;
+    height: 5vh;
+    padding: 1vh 2.5vh;
+    border-radius: 10vh;
+    margin-right: 5px;
+    border: 3px solid #ffd53c;
+    font-size: 2.7vh;
+}
+
+/* the search button with emoji style to look circular and fit the magnifying lens */
+input[type="submit"] {
+    width: 7vh;
+    height: 7vh;
+    margin-left: 5px;
+    border: 3px solid #ffd53c;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    font-size: 3vh;
+}
+
+/* BIG h1 */
+h1 {
+    font-size: min(7vw, 7vh);
+}
+
+/* kinda small h3 */
+h3 {
+    text-align: center;
+    font-style: italic;
+    font-size: min(2.5vw, 2.5vh);
+    font-weight: 300;
+}
+
+/* the results occupy entire page */
+.result {
+    width: 60vw;
+}
+
+h2.resultTitle {
+    font-size: min(3.8vh, 3.8vw);
+}
+
+h2.resultTitle:hover {
+    text-decoration: underline;
+}
+
+p.resultPublished {
+    font-style: italic;
+    font-size: min(2.4vh, 2.4vw);
+    font-weight: 300;
+}
+
+div.titleDiv {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p.resultDescription {
+    text-align: justify;
+    font-size: min(2.8vh, 2.8vw);
+    margin-top: 10px;
+}
+
+h2 > a {
+    font-size: min(3vh, 3vw);
+    font-weight: lighter;
+    font-style: italic;
+    text-decoration: none;
+}
+
+h2 > a:hover {
+    text-decoration: underline;
+}

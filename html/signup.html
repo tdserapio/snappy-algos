@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnappyAlgos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="algorithms, sign-up" />
+    <meta name="description" content="This is the sign-up page of SnappyAlgos" />
+    <meta name="author" content="Troy Serapio" />
+    <meta name="revised" content="18/03/2024" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sign.css">
+
+    <script>
+        // If already signed in, then go to profile page
+        if (localStorage.getItem("signedIn") != "" && localStorage.getItem("signedIn") != null) {
+            window.location.href = "/html/profile.html";
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a id="title" href="/">SnappyAlgos</a>
+        <ul>
+            <li><a href="/html/algorithms">Algorithms</a></li>
+            <li><a href="/html/solving">Solving</a></li>
+            <li><a href="/html/credits">Credits</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <br><br><br>
+        <h1>Sign-Up</h1>
+        <input name="username" id="username" placeholder="Enter username" type="text" />
+        <input name="email" id="email" placeholder="Enter email" type="text" />
+        <input name="nationality" id="nationality" placeholder="Enter nationality" type="text" />
+        <input name="age" id="age" placeholder="Enter age" type="number" />
+        <input name="password" id="password" placeholder="Enter password" type="password" />
+        <button onclick="signUp()">SIGN-UP</button>
+        <p><em>Have an account already? <a href="/html/signin.html">Sign-in</a> instead!</em></p>
+    </div>
+</body>
+
+<script src="../js/sign.js"></script>
+
+</html>

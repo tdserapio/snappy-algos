@@ -1,0 +1,16 @@
+{
+    "articles": [
+        {
+            "title": "Basic Input And Output",
+            "datePublished": "March 16, 2024",
+            "description": "How does one take in input and output in C++? Find out in this article!",
+            "linkToArticle": "/html/algorithms/articles/article.html?name=basic-input-and-output.html"
+        },
+        {
+            "title": "If Statements",
+            "datePublished": "March 16, 2024",
+            "description": "If interested in if statements in JS, then you have come to the right place!",
+            "linkToArticle": "/html/algorithms/articles/article.html?name=if-statements.html"
+        }
+    ]
+}

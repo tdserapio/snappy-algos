@@ -1,0 +1,139 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnappyAlgos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../../../css/navbar.css">
+    <link rel="stylesheet" href="../../../../../css/article.css">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="algorithms, climbing-stairs" />
+    <meta name="description" content="This is the article in SnappyAlgos talking about climbing stairs using DP." />
+    <meta name="author" content="Troy Serapio" />
+    <meta name="revised" content="18/03/2024" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>    
+</head>
+<body>
+    <nav>
+        <a id="title" href="/">SnappyAlgos</a>
+        <ul>
+            <li><a href="/html/algorithms">Algorithms</a></li>
+            <li><a href="/html/solving">Solving</a></li>
+            <li><a href="/html/credits">Credits</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hardcoded article for climbing stairs problem in Leetcode -->
+
+    <div class="container">
+
+        <p><a href="../../../">SnappyAlgos Solves</a> > <a href="../../">Dynamic Programming</a> > <a href="../">Coin Change</a></p>
+        <br>
+        <h1>Climbing Staircase</h1>
+        <br>
+        <p><i>Authored by: Troy Serapio</i> • <i>Published: March 18, 2024</i></p>
+        <br>
+        <hr>
+        <br>
+
+        <h2>Interpreting the Problem Statement</h2>
+
+        <br>
+
+        <p>The problem asks us to determine the number of distinct ways to climb a staircase with n steps. You can take either 1 or 2 steps at a time.</p>
+        <br>
+        <p>For instance, if there are 2 steps <code>(n = 2)</code>, there are 2 ways to climb:</p>
+        
+        <ul style="margin-left: 40px;">
+            <li><p>Take 1 step at a time (1 step + 1 step)</p></li>
+            <li><p>Take 2 steps at once</p></li>
+        </ul>
+
+        <br>
+
+        <p>If there are 3 steps (<code>n = 3</code>), there are 3 ways to climb:</p>
+        
+        <ul style="margin-left: 40px;">
+            <li><p>Take 1 step at a time (1 step + 1 step + 1 step)</p></li>
+            <li><p>Take 2 steps followed by 1 step (2 steps + 1 step)</p></li>
+            <li><p>Take 1 step followed by 2 steps (1 step + 2 steps)</p></li>
+        </ul>
+
+        <br>
+
+        <h2>Dynamic Programming Solution</h2>
+        <br>
+        <p>Dynamic programming is a powerful technique for solving problems that can be broken down into overlapping subproblems. In this case, the number of ways to climb <code>n</code> steps can be determined by considering the number of ways to climb the preceding 1 and 2 steps. Here's a step-by-step breakdown of the dynamic programming approach:</p>
+        <br>
+        <h3>Define the base cases:</h3>
+        <br>
+        <p>Since DP keeps going to the previous states, the base cases are essentially like the "stop, this is the default answer." In this case, it would be:</p>
+        <br>
+        <ul style="margin-left: 40px;">
+            <li><p>There is 1 way to climb 0 steps (the starting position).</p></li>
+            <li><p>There are 1 way to climb 1 step.</p></li>
+        </ul>
+        <br>
+        <p>Note that there is an edge case of "there is 0 ways to climb negative steps" if doing this in the top-down approach.</p>
+        
+        <br>
+        <h3>Create a DP table:</h3>
+        
+        <br>
+        <p>Initialize a DP table dp of size <code>n + 1</code> to store the number of ways to climb <code>i</code> steps (where <code>i</code> ranges from 0 to n).</p>
+        <br>
+        <p>Then, after initializing the DP table, we fill it up from the bottom to the top:</p>
+        <ul style="margin-left: 40px;">
+            <li><p>For each step i (from 2 to n):</p></li>
+            <ul style="margin-left: 40px;">
+                <li><p>The number of ways to climb <code>i</code> steps is the sum of the ways to climb <code>i - 1</code> steps (taking 1 step) and <code>i - 2</code> steps (taking 2 steps).</p></li>
+                <li><p>Mathematically, <code>dp[i] = dp[i - 1] + dp[i - 2]</code>.</p></li>
+            </ul>
+        </ul>
+        <br>
+        <p>The final answer is stored in dp[n], representing the number of ways to climb <code>n</code> steps.</p>
+        <br>
+
+        <h2>Implementation</h2>
+        
+        <p>Here's a Python implementation of the dynamic programming solution (bottom-up):</p>
+        <br>
+        <pre><code>
+    def climbStairs(n):
+        if n == 0: # Base case
+            return 1
+        elif n == 1: # Base case
+            return 1
+        else:
+            dp = [0] * (n + 1) # Make DP array
+            dp[0] = 1 # Base case
+            dp[1] = 1 # Base case
+            for i in range(2, n + 1): # DP solution itself
+                dp[i] = dp[i - 1] + dp[i - 2] # The mathematical version of the DP solution
+        return dp[n] # return dp[n]
+        </code></pre>
+
+        <br>
+        <p>What's really interesting about this solution is that, instead of being exponential growth in runtime (if it were done simply using recursion), by caching our results and just referencing it later on, the runtime is only actually the size of the array, which is <code>O(n)</code> where <code>n</code> is the number of steps to climb.</p>
+        <br>
+        <h2>Alright, kthxbai!!</h2>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+<script>hljs.highlightAll();</script>
+
+
+</html>

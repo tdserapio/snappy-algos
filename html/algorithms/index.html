@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnappyAlgos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="algorithms, search" />
+    <meta name="description" content="This is the Algorithms page of SnappyAlgos, where you can find a lot of different articles covering a variety of algorithms and data structures." />
+    <meta name="author" content="Troy Serapio" />
+    <meta name="revised" content="18/03/2024" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/algorithms.css">
+</head>
+<body>
+    <nav>
+        <a id="title" href="/">SnappyAlgos</a>
+        <ul>
+            <li><a href="/html/algorithms">Algorithms</a></li>
+            <li><a href="/html/solving">Solving</a></li>
+            <li><a href="/html/credits">Credits</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>SnappyAlgos Article Search</h1>
+        <br>
+        <form class="form" method="GET" action="index.html">
+            <input type="text" name="query" placeholder="Search the library of SnappyAlgos..." onkeydown="return /^[A-Za-z0-9_. ]+$/i.test(event.key)">
+            <input type="submit" value="&#x1F50E;" onclick="submittedForm()">
+        </form>
+        <br>
+        <br>
+        <div class="results">
+            
+        </div>
+    </div>
+</body>
+
+<script src="../../js/algorithms.js"></script>
+<script>
+    checkLink();
+</script>
+
+</html>

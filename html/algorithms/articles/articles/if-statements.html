@@ -1,0 +1,70 @@
+<h1>If-Else Statements</h1>
+<p><i>Authored by: Troy Serapio</i> • <i>Published: March 16, 2024</i></p>
+
+<hr>
+
+<p>In the realm of Computer Science, the utilization of input and output is pervasive, and one powerful construct that facilitates decision-making based on input conditions is the if-else statement. These lines of code play a crucial role in controlling the flow of a program by evaluating whether a specified condition is true or false. Let's delve deeper into the concept of if-else statements and explore how they can be applied to various scenarios.</p>
+
+<h2>Understanding If-Else Statements</h2>
+
+<p>If-else statements are conditional constructs that enable a program to make decisions based on certain conditions. The syntax typically looks like this:</p>
+
+<pre><code class="language-js">
+
+
+    if (condition) {
+        &#47;&#47; if it is true
+    } else {
+        &#47;&#47; if it is false
+    }
+    
+</code></pre>
+
+<p>These statements allow the program to execute different blocks of code depending on whether the specified condition evaluates to true or false.</p>
+
+<h2>Real-World Application:</h2>
+
+<p>Consider the example of a smartphone's lock screen. When you enter the combination of numbers to unlock your phone, the system employs if-else statements to determine whether the entered combination is correct.</p>
+
+<pre><code class="language-js">
+
+
+    user_input = prompt("What is the passcode?"); &#47;&#47; Function to get user input
+    correct_combination = "1234";  &#47;&#47; Example correct combination
+    if (user_input === correct_combination) {
+        alert("Access granted. Welcome to your device!");
+        alert("Incorrect password. Please try again.");
+    }
+    
+</code></pre>
+
+<p>In this scenario, the if-else statement checks if the user's input matches the correct combination. If it does, the program prints a message welcoming the user; otherwise, it notifies the user that the password is incorrect.</p>
+
+<h2>Conditional Decision-Making:</h2>
+
+<p>
+The power of if-else statements lies in their ability to facilitate conditional decision-making. They can be used in a myriad of situations, from validating user input to controlling the flow of a program based on dynamic conditions.
+</p>
+
+<pre><code class="language-js">
+
+
+    temperature = get_temperature();  &#47;&#47; Function to get temperature input
+    if (temperature &gt; 30) {
+        console.log("It's a hot day!");
+    } else if (20 &lt;= temperature &lt;= 30) {
+        console.log("The weather is pleasant.");
+    } else {
+        console.log("It's cold outside.");
+    }
+
+    
+    
+</code></pre>
+
+<p>In this example, the program provides different output based on the temperature input, showcasing the flexibility and versatility of if-else statements in adapting to varying conditions.</p>
+
+<h2> Conclusion:</h2>
+
+<p>If-else statements are fundamental tools in programming, allowing developers to create responsive and dynamic applications. By incorporating these conditional constructs, programs can intelligently respond to user input and changing conditions, enhancing the overall user experience and functionality. As you delve further into the world of Computer Science, mastering the art of if-else statements will undoubtedly be a key skill in your programming toolkit.</p>
+<br /> <br /> <br /> 
